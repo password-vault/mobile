@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { TouchableWithoutFeedback, Keyboard, Platform } from 'react-native';
+import { TouchableWithoutFeedback, Keyboard } from 'react-native';
 import {
   View,
   Heading,
