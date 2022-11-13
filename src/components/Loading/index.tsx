@@ -1,20 +1,12 @@
-import { CircleNotch } from 'phosphor-react-native';
 import { useTheme } from 'styled-components/native';
-
-import { Container } from './styles';
+import { Spinner, View } from 'native-base';
 
 export function Loading() {
   const { colors } = useTheme();
 
   return (
-    <Container>
-      <CircleNotch
-        size={24}
-        color={colors.red[500]}
-        style={{
-          transform: [{ rotate: '360deg' }],
-        }}
-      />
-    </Container>
+    <View flex={1} alignItems='center' justifyContent='center'>
+      <Spinner />
+    </View>
   );
 }

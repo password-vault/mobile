@@ -1,0 +1,29 @@
+{
+  "user": {
+    "username": "Icaro Vieira",
+    "email": "icaro@vieir.com",
+    "imageSource": "https://c4.wallpaperflare.com/wallpaper/6/183/832/dubstepgutter-anime-girls-anime-artwork-wallpaper-preview.jpg"
+  },
+  "passwords": [
+    {
+      "title": "Spotify",
+      "password": "22f1baea-6385-11ed-81ce-0242ac120002"
+    },
+    {
+      "title": "Github",
+      "password": "22f1beaa-6385-11ed-81ce-0242ac120002"
+    },
+    {
+      "title": "Facebook",
+      "password": "22f1c0e4-6385-11ed-81ce-0242ac120002"
+    },
+    {
+      "title": "LinkedIn",
+      "password": "22f1c454-6385-11ed-81ce-0242ac120002"
+    },
+    {
+      "title": "Youtube",
+      "password": "22f1cb84-6385-11ed-81ce-0242ac120002"
+    }
+  ]
+}
