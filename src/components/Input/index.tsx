@@ -41,7 +41,15 @@ function InputIcon({ children }: IInputIconProps) {
 interface InputProps extends IInputProps {}
 
 function Input({ ...rest }: InputProps) {
-  return <InputNative flex={1} {...rest} />;
+  return (
+    <InputNative
+      flex={1}
+      borderBottomWidth={0}
+      borderColor='transparent'
+      _focus={{ bg: 'transparent', borderColor: 'transparent' }}
+      {...rest}
+    />
+  );
 }
 
 export const InputRoot = {

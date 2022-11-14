@@ -14,13 +14,13 @@ export function Header() {
   const { user } = useUser((state) => state);
 
   return (
-    <HStack mt={12} justifyContent='space-between' alignItems='center'>
+    <HStack mt={12} px={4} justifyContent='space-between' alignItems='center'>
       <HStack space={4} alignItems='center'>
         <Image
           source={{ uri: user.imageSource }}
           alt={user.username}
-          w={20}
-          h={20}
+          w='50px'
+          h='50px'
           borderRadius={50}
           borderWidth={3}
           borderStyle='solid'

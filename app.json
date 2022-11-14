@@ -1,22 +1,20 @@
 {
   "expo": {
-    "name": "mobile",
-    "slug": "mobile",
+    "name": "vault",
+    "slug": "vault",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "https://c4.wallpaperflare.com/wallpaper/6/183/832/dubstepgutter-anime-girls-anime-artwork-wallpaper-preview.jpg",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "image": "https://c4.wallpaperflare.com/wallpaper/6/183/832/dubstepgutter-anime-girls-anime-artwork-wallpaper-preview.jpg",
+      "resizeMode": "cover",
+      "backgroundColor": "#000"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },

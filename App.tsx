@@ -13,11 +13,10 @@ import { NativeBaseProvider, StatusBar } from 'native-base';
 import { ThemeProvider } from 'styled-components';
 
 import { theme as ApplicationTheme } from './src/styles/theme';
-import { reactotron } from './src/configs/global/reactotron';
+import { reactotron } from './src/configs';
 import { Routes } from './src/routes';
-import { Loading } from './src/components/Loading';
+import { Loading } from './src/components';
 import { useToggle } from './src/store/theme';
-import { CreateAccount } from './src/screens/CreateAccount';
 
 if (__DEV__) {
   reactotron.connect();

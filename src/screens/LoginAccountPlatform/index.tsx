@@ -9,19 +9,29 @@ import {
   Button,
   Text,
   useToast,
+  HStack,
 } from 'native-base';
-import { At, Detective, Eye, Password, EyeSlash } from 'phosphor-react-native';
+import {
+  At,
+  Detective,
+  Eye,
+  Password,
+  EyeSlash,
+  CaretLeft,
+} from 'phosphor-react-native';
 import { useTheme } from 'native-base';
 
 import { InputRoot } from '../../components/Input';
 import { reactotronLog } from '../../utils/reactotronLog';
+import { useNavigation } from '@react-navigation/native';
 
-export function CreateAccount() {
+export function LoginInAccountPlatform() {
   const { colors } = useTheme();
   const [isVisiblePassword, setIsVisiblePassword] = useState(true);
   const [email, setEmail] = useState<string | null>(null);
   const [password, setPassword] = useState<string | null>(null);
   const toast = useToast();
+  const navigator = useNavigation();
 
   function handleToggleButton() {
     setIsVisiblePassword((prev) => !prev);
@@ -45,10 +55,10 @@ export function CreateAccount() {
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
       <View
         flex={1}
+        bg='gray.900'
         px={8}
         justifyContent='center'
         alignItems='center'
-        bg='gray.900'
       >
         <Flex mb={5}>
           <Icon
@@ -116,9 +126,34 @@ export function CreateAccount() {
               color='red.400'
               fontSize='md'
             >
-              Criar conta
+              Entrar
             </Text>
           </Button>
+          <HStack justifyContent='space-between'>
+            <Button
+              bg='transparent'
+              _pressed={{ bg: 'transparent', opacity: 0.4 }}
+              onPress={() => navigator.navigate('login')}
+            >
+              <HStack>
+                <CaretLeft size={22} color='white' />
+                <Text color='gray.100' fontWeight='semibold'>
+                  Voltar
+                </Text>
+              </HStack>
+            </Button>
+            <Button
+              bg='transparent'
+              _pressed={{ bg: 'transparent', opacity: 0.4 }}
+              onPress={() => navigator.navigate('createNewAccountInPlatform')}
+            >
+              <HStack>
+                <Text color='gray.100' fontWeight='semibold'>
+                  Criar nova conta
+                </Text>
+              </HStack>
+            </Button>
+          </HStack>
         </VStack>
       </View>
     </TouchableWithoutFeedback>

@@ -17,8 +17,8 @@ export function Login() {
     try {
       const { data } = await baseApi.get('/user');
       reactotronLog(data);
-      setUser();
-      navigator.navigate('tabs');
+      await setUser();
+      navigator.navigate('home');
     } catch (err) {
       reactotronLog(err);
     }
@@ -67,7 +67,7 @@ export function Login() {
           bg='transparent'
           _pressed={{ bg: 'gray.800' }}
           variant='ghost'
-          onPress={() => navigator.navigate('createAcccount')}
+          onPress={() => navigator.navigate('loginAccountPlatform')}
         >
           <HStack alignItems='center' flexDir='row'>
             <Text color='gray.300' fontSize='sm'>
