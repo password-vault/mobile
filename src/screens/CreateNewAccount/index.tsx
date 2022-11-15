@@ -11,7 +11,7 @@ export function CreateNewAccountInPlatform() {
   const [username, setUsername] = useState<string>(null);
   const [email, setEmail] = useState<string>(null);
   const [password, setPassword] = useState<string>(null);
-  const [repeatPassword, setRepeatPassword] = useState<string>(null);
+  const [repeatPassword, setRepeatPassword] = useState('');
   const repeatPasswordIsEqualPassword = password === repeatPassword;
   const navigator = useNavigation();
 
@@ -69,7 +69,11 @@ export function CreateNewAccountInPlatform() {
             </InputRoot.InputContainer>
             <InputRoot.InputContainer
               borderColor={
-                repeatPasswordIsEqualPassword ? 'green.500' : 'red.500'
+                repeatPasswordIsEqualPassword
+                  ? 'green.500'
+                  : repeatPassword.length
+                  ? 'red.500'
+                  : 'gray.100'
               }
             >
               <InputRoot.Input
@@ -85,7 +89,7 @@ export function CreateNewAccountInPlatform() {
             <Button
               bg='transparent'
               _pressed={{ bg: 'transparent', opacity: 0.3 }}
-              onPress={() => navigator.navigate('loginAccountPlatform')}
+              onPress={() => navigator.goBack()}
             >
               <HStack>
                 <CaretLeft size={22} color='white' />
