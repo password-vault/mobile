@@ -1,13 +1,5 @@
-import {
-  Button,
-  Heading,
-  HStack,
-  Image,
-  Text,
-  View,
-  VStack,
-} from 'native-base';
-import { Gear } from 'phosphor-react-native';
+import { Heading, HStack, Image, Text, VStack } from 'native-base';
+
 import { useUser } from '../../store/user';
 
 export function Header() {
@@ -33,9 +25,6 @@ export function Header() {
           <Text color='gray.400'>{user.email}</Text>
         </VStack>
       </HStack>
-      <Button bg='transparent' _pressed={{ bg: 'transparent', opacity: 0.4 }}>
-        <Gear size={20} weight='bold' color='#e7e5e4' />
-      </Button>
     </HStack>
   );
 }

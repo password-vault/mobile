@@ -1,6 +1,6 @@
 import { Heading, View, FlatList, HStack, Button } from 'native-base';
 import { TouchableWithoutFeedback, Keyboard } from 'react-native';
-import { useState, useCallback, useRef } from 'react';
+import { useState, useCallback } from 'react';
 import { useFocusEffect } from '@react-navigation/native';
 import { useAtom } from 'jotai';
 
