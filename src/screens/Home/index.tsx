@@ -90,7 +90,7 @@ export function Home() {
             ListEmptyComponent={<CardEmpty />}
             mt={4}
             contentContainerStyle={{
-              paddingRight: 8,
+              paddingHorizontal: 12,
             }}
           />
         ) : (

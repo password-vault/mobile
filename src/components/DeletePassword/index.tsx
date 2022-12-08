@@ -3,7 +3,10 @@ import { Button, HStack, Modal, Text } from 'native-base';
 import { X } from 'phosphor-react-native';
 import { useState, useEffect } from 'react';
 import { baseApi } from '../../configs';
-import { modaDeleteIdAtom, modalDeleteAtom } from '../../store/ModalDeleteAtom';
+import {
+  modalDeleteIdAtom,
+  modalDeleteAtom,
+} from '../../store/ModalDeleteAtom';
 import { reactotronLog } from '../../utils/reactotronLog';
 
 interface IDeletePasswordModalProps {
@@ -19,7 +22,7 @@ interface IPasswordProps {
 export function DeletePassword({ refetch }: IDeletePasswordModalProps) {
   const [currentPassword, setCurrentPassword] = useState<IPasswordProps>(null);
   const [isOpen, setIsOpen] = useAtom(modalDeleteAtom);
-  const [id, setId] = useAtom(modaDeleteIdAtom);
+  const [id, setId] = useAtom(modalDeleteIdAtom);
 
   useEffect(() => {
     if (!id) return;

@@ -3,7 +3,10 @@ import { Button, Flex, Heading, HStack, Text, View, VStack } from 'native-base';
 import { Eye, EyeSlash, Trash } from 'phosphor-react-native';
 import { useTheme } from 'styled-components';
 import { useAtom } from 'jotai';
-import { modaDeleteIdAtom, modalDeleteAtom } from '../../store/ModalDeleteAtom';
+import {
+  modalDeleteIdAtom,
+  modalDeleteAtom,
+} from '../../store/ModalDeleteAtom';
 interface IPasswordProps {
   id: string;
   title: string;
@@ -15,7 +18,7 @@ export function Card({ password, title, id }: IPasswordProps) {
   const [passwordVisible, setPasswordVisible] = useState(false);
   const { colors } = useTheme();
   const [_, setIsOpen] = useAtom(modalDeleteAtom);
-  const [, setId] = useAtom(modaDeleteIdAtom);
+  const [, setId] = useAtom(modalDeleteIdAtom);
 
   function handleToggleVisible() {
     setPasswordVisible((prev) => !prev);

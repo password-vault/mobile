@@ -1,10 +1,12 @@
 import { useTheme } from 'styled-components';
+import { useEffect, useState } from 'react';
 import { Button, Flex, HStack, Icon, Text, View, VStack } from 'native-base';
-import { TouchableWithoutFeedback, Keyboard } from 'react-native';
-import { CaretLeft, Detective, UserPlus } from 'phosphor-react-native';
-import { InputRoot } from '../../components';
-import { useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
+import { TouchableWithoutFeedback, Keyboard } from 'react-native';
+import { checkConnection } from '@password-vault/lib';
+import { CaretLeft, Detective, UserPlus } from 'phosphor-react-native';
+
+import { InputRoot } from '../../components';
 
 export function CreateNewAccountInPlatform() {
   const { colors } = useTheme();
@@ -14,6 +16,10 @@ export function CreateNewAccountInPlatform() {
   const [repeatPassword, setRepeatPassword] = useState('');
   const repeatPasswordIsEqualPassword = password === repeatPassword;
   const navigator = useNavigation();
+
+  useEffect(() => {
+    checkConnection();
+  }, []);
 
   async function handleSubmitForm() {
     console.log('Icaro');

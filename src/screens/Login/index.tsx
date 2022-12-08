@@ -10,7 +10,6 @@ import {
   VStack,
   useToast,
   Divider,
-  KeyboardAvoidingView,
 } from 'native-base';
 import { Fontisto } from '@expo/vector-icons';
 import { useTheme } from 'styled-components/native';
